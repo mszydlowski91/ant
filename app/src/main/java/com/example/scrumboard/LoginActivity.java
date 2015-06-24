@@ -2,14 +2,18 @@ package com.example.scrumboard;
 
 import com.example.scrumboard.db.DataSource;
 import com.example.scrumboard.model.Member;
+import com.example.scrumboard.server.GetData;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.List;
 
 public class LoginActivity extends Activity {
 
@@ -26,7 +30,10 @@ public class LoginActivity extends Activity {
 	    setContentView(R.layout.activity_login);
 
 	    db = new DataSource(getApplicationContext());
-	    
+        GetData data =  new GetData();
+        data.getAllMembers(); //TODO nie wiem, zapisuje sie lokalnie w GetData
+	    data.addMember(new Member(5,"Adrzej","Nowak","nowak@gmail.com","nowak123")); //TODO dziala dodawanie ludzi
+
 	    email = (EditText) findViewById(R.id.edittext_login_email);
 	    password = (EditText) findViewById(R.id.edittext_login_password);
 	    loginBtn = (Button) findViewById(R.id.button_login);
