@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightBlue" 
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createUserStory"
+            android:textSize="10pt" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/edittext_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textPersonName" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/edittext_details"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/details"
+            android:inputType="textMultiLine"
+            android:lines="5" >
+        </EditText>
+
+        <Spinner
+            android:id="@+id/spinner_status"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/type" >
+        </Spinner>
+
+        <EditText
+            android:id="@+id/edittext_priority"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/priority"
+            android:inputType="number" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/edittext_estimated_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/estimatedtime"
+            android:inputType="number" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/edittext_comments"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/comments"
+            android:inputType="textMultiLine"
+            android:lines="5" >
+        </EditText>
+
+        <Button
+            android:id="@+id/button_add_userstory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sendFeedback"
+            android:text="@string/addUserStory" >
+        </Button>
+    </LinearLayout>
+
+</ScrollView><!-- From: file:/home/j/workspace/android/ant/app/src/main/res/layout/userstory.xml -->
